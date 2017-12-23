@@ -1,7 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom'
-import Media from '@/playlist/components/media'
+import Playlist from '@/playlist/components/playlist'
+import data from '@/api.json'
 
 const app = document.getElementById('app')
 
-render(<Media type="video" title="marico el que lo lea" author="la puta esa" image="./images/covers/responsive.jpg" />, app)
+render(<Playlist data={data} />, app)
