@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import Media from '@/playlist/components/media'
 import './playlist.css'
 
-class Playlist extends Component {
-  render() {
-    const playlist = this.props.data.categories[0].playlist
+function Playlist (props) {
+    const playlist = props.data.categories[0].playlist
     
     return (
       <div  className="Playlist"  >
@@ -14,8 +13,7 @@ class Playlist extends Component {
           })
         }
       </div>
-    );
+    )
   }
-}
 
 export default Playlist;
