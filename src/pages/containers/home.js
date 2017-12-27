@@ -3,6 +3,8 @@ import HomeLayout from '@/pages/components/home-layout';
 import Categories from '@/categories/components/categories';
 import ModalContainer from '@/widgets/containers/modal';
 import Modal from '@/widgets/components/modal';
+import HandleError from '@/error/containers/handleError';
+import Related from '@/pages/components/related'
 
 class Home extends Component {
   state = {
@@ -22,8 +24,9 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <HandleError>
         <HomeLayout >
+          <Related />
           <Categories 
             categories={this.props.data.categories} 
             handleOpenModal={this.handleOpenModal}
@@ -38,7 +41,7 @@ class Home extends Component {
           }
           
         </HomeLayout>
-      </div>
+      </HandleError>
     );
   }
 }
