@@ -5,7 +5,7 @@ module.exports = {
     "home": path.resolve(__dirname, 'src/entries/home.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'js/[name].js'
   },
   devServer: {
@@ -36,7 +36,7 @@ module.exports = {
           options: {
             limit: 1000000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'images/[name].[ext]',
           }
         }
       },
