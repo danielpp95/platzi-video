@@ -10,6 +10,7 @@ function Category(props) {
       {
         <Playlist 
           Playlist={props.playlist}
+          handleOpenModal={props.handleOpenModal}
         />
       }
     </div>
