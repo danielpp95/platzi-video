@@ -4,10 +4,12 @@ import './volume.css'
 
 const Volume = props => (
   <div className="Volume" >
-    <VolumenIcon
-      color="white"
-      size={25}
-    />
+    <div onClick={props.handleClick} >
+      <VolumenIcon
+        color="white"
+        size={25}
+      />
+    </div>
     <div  className="Volume-range" >
       <input
         type="range" 
@@ -15,6 +17,7 @@ const Volume = props => (
         max={1}
         step={.05}
         onChange={props.handleVolumeChange}
+        value={props.value}
       />
     </div>
   </div>
