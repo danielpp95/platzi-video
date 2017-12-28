@@ -1,0 +1,10 @@
+.FullScreen {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+}
