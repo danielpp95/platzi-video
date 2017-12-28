@@ -2,6 +2,7 @@ import React from 'react'
 import './playPause.css'
 import Play from '@/icons/components/play'
 import Pause from '@/icons/components/pause'
+import Timer from './Timer'
 
 const PlayPause = props => (
   <div className="PlayPause" >

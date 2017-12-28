@@ -5,7 +5,7 @@ class Video extends Component {
   togglePlay = () => {
     this.props.pause ? this.video.play() : this.video.pause()
   }
-  
+
   setRef = element => {
     this.video = element
   }
@@ -16,12 +16,16 @@ class Video extends Component {
     }
   }
   render() {
+    const {
+      handleLoadedMetadata
+    } = this.props
     return (
       <div className="Video">
         <video
           src={this.props.src}
           autoPlay={this.props.autoPlay}
           ref={this.setRef}
+          onLoadedMetadata={handleLoadedMetadata}
         />
       </div>
     );
