@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from './icon'
 
-function Play (props) {
+function FullScreen (props) {
   return (
     <Icon {...props}>
       <path d="M32 0h-13l5 5-6 6 3 3 6-6 5 5z"></path>
@@ -13,4 +13,4 @@ function Play (props) {
   )
 }
 
-export default Play
+export default FullScreen
