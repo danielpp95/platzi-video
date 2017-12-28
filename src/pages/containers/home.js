@@ -9,12 +9,14 @@ import VideoPlayer from '@/player/containers/video-player'
 
 class Home extends Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    media: null
   }
 
-  handleOpenModal = () => {
+  handleOpenModal = (media) => {
     this.setState({
-      modalVisible: true
+      modalVisible: true,
+      media
     })
   }
 
@@ -28,9 +30,7 @@ class Home extends Component {
       <HandleError>
         <HomeLayout >
           <Related />
-          <VideoPlayer
-            autoPlay={false}
-          />
+          
           <Categories 
             categories={this.props.data.categories} 
             handleOpenModal={this.handleOpenModal}
@@ -38,8 +38,11 @@ class Home extends Component {
           {
             this.state.modalVisible && <ModalContainer>
             <Modal handleClick={this.handleCloseModal} >
-              <h1>esto es un modal</h1>
-
+              <VideoPlayer
+                autoPlay={true}
+                src={this.state.media.src}
+                title={this.state.media.title}
+              />
             </Modal>
           </ModalContainer> 
           }

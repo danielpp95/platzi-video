@@ -3,7 +3,7 @@ import Search from '../components/search'
 
 class SearchContainer extends Component {
   state = {
-    value: 'Luis Fonsi'
+    value: ''
   }
   handleSubmit = event => {
     event.preventDefault()

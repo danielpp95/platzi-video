@@ -100,7 +100,7 @@ class VideoPlayer extends Component {
     return (
       <VideoPlayerLayout setRef={this.setRef} >
         <Title 
-          title='esto es un video'
+          title={this.props.title}
         />
         <Controls>
           <PlayPause 
@@ -127,7 +127,7 @@ class VideoPlayer extends Component {
         </Controls>
         {this.state.loading ? <Spinner/> : null }
         <Video
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          src={this.props.src}
           autoPlay={this.props.autoPlay}
           pause={this.state.pause}
           handleLoadedMetadata={this.handleLoadedMetadata}
